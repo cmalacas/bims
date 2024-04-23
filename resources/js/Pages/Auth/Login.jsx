@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Checkbox from '@/Components/Checkbox';
-import GuestLayout from '@/Layouts/GuestLayout';
+import LoginLayout from '@/Layouts/LoginLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -31,66 +31,63 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <GuestLayout>
-            <Head title="Log in" />
-
-            {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
-
-            <form onSubmit={submit}>
-                <div>
-                    <InputLabel htmlFor="email" value="Email" />
-                    <TextInput
-                        id="email"
-                        type="email"
-                        name="email"
+        <>
+        <Head title="Login" />
+        <LoginLayout>
+           
+            <form onSubmit={ submit } className="login100-form validate-form">
+                
+                <span className="login100-form-title p-b-43">
+                    Login to continue
+                </span>
+                
+                <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <input 
+                        className="input100" 
+                        type="text" 
+                        name="email" 
                         value={data.email}
-                        className="mt-1 block w-full"
-                        autoComplete="username"
-                        isFocused={true}
-                        onChange={handleOnChange}
+                        onChange={ handleOnChange }
                     />
-
-                    <InputError message={errors.email} className="mt-2" />
+                    <span className="focus-input100"></span>
+                    <span className="label-input100">Email</span>
                 </div>
-
-                <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
-
-                    <TextInput
-                        id="password"
-                        type="password"
-                        name="password"
+                
+                <div className="wrap-input100 validate-input" data-validate="Password is required">
+                    <input 
+                        className="input100" 
+                        type="password" 
+                        name="pass" 
                         value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="current-password"
-                        onChange={handleOnChange}
+                        onChange={ handleOnChange }
                     />
-
-                    <InputError message={errors.password} className="mt-2" />
+                    <span className="focus-input100"></span>
+                    <span className="label-input100">Password</span>
                 </div>
+                
+                <div className="flex-sb-m w-full p-t-3 p-b-32">
+                    <div className="contact100-form-checkbox">
+                        <input className="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" />
+                        <label className="label-checkbox100">
+                            Remember me
+                        </label>
+                    </div>
+                <div>
 
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox name="remember" value={data.remember} onChange={handleOnChange} />
-                        <span className="ml-2 text-sm text-gray-600">Remember me</span>
-                    </label>
-                </div>
+                <a href="#" className="txt1">
+                    Forgot Password?
+                </a>
+            </div>
+        </div>
+        <div className="container-login100-form-btn">
+            <button className="login100-form-btn">
+                Login
+            </button>
+        </div>        
+    </form>
 
-                <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
-
-                    <PrimaryButton className="ml-4" disabled={processing}>
-                        Log in
-                    </PrimaryButton>
-                </div>
-            </form>
-        </GuestLayout>
+    
+        </LoginLayout>
+        </>
     );
 }

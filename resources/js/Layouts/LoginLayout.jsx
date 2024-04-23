@@ -1,8 +1,6 @@
 import React from 'react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
 
-export default function Guest({ children }) {
+export default function Login({ children }) {
     return (
         <div className="login">
             <div className="limiter">
