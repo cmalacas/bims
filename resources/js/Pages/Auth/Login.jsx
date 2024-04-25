@@ -43,7 +43,7 @@ export default function Login({ status, canResetPassword }) {
                 
                 <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                     <input 
-                        className="input100" 
+                        className={`input100 ${data.email === '' ? '' : 'has-val'}`} 
                         type="text" 
                         name="email" 
                         value={data.email}
@@ -55,9 +55,9 @@ export default function Login({ status, canResetPassword }) {
                 
                 <div className="wrap-input100 validate-input" data-validate="Password is required">
                     <input 
-                        className="input100" 
+                        className={`input100 ${data.password === '' ? '' : 'has-val'}`} 
                         type="password" 
-                        name="pass" 
+                        name="password" 
                         value={data.password}
                         onChange={ handleOnChange }
                     />

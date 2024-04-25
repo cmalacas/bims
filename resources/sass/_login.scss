@@ -69,8 +69,10 @@
                 padding: 0 20px;
 
                 transition: all .4s;
+                border-radius: 10px;
 
                 &:focus {
+                  border: none;
                   &+ .focus-input100 {
                     visibility: visible;
                     opacity:1;
@@ -85,6 +87,18 @@
               }
 
             }            
+          }
+
+          .has-val {
+            height:48px !important;
+            box-shadow: none;
+
+            &+.focus-input100 {
+              &+.label-input100 {
+                top: 14px;
+                font-size: 13px;
+              }
+            }
           }
 
           .focus-input100 {
