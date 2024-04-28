@@ -38,7 +38,7 @@ export default function Topbar() {
                 <div className="d-flex">
                   <div className="flex-shrink-0">
                     <img
-                      src={"/assets/img/user1-128x128.jpg"}
+                      src={"/images/user1-128x128.jpg"}
                       alt="User Avatar"
                       className="img-size-50 rounded-circle me-3"
                     />
@@ -63,7 +63,7 @@ export default function Topbar() {
                 <div className="d-flex">
                   <div className="flex-shrink-0">
                     <img
-                      src={"/assets/img/user8-128x128.jpg"}
+                      src={"/images/user8-128x128.jpg"}
                       alt="User Avatar"
                       className="img-size-50 rounded-circle me-3"
                     />
@@ -89,7 +89,7 @@ export default function Topbar() {
                 <div className="d-flex">
                   <div className="flex-shrink-0">
                     <img
-                      src={"/assets/img/user3-128x128.jpg"}
+                      src={"/images/user3-128x128.jpg"}
                       alt="User Avatar"
                       className="img-size-50 rounded-circle me-3"
                     />
@@ -155,7 +155,7 @@ export default function Topbar() {
           <li className="nav-item dropdown user-menu">
             <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               <img
-                src={"/assets/img/user2-160x160.jpg"}
+                src={"/images/user2-160x160.jpg"}
                 className="user-image rounded-circle shadow"
                 alt="User Image"
               />
@@ -165,7 +165,7 @@ export default function Topbar() {
           
               <li className="user-header text-bg-primary">
                 <img
-                  src={"/assets/img/user2-160x160.jpg"}
+                  src={"/images/user2-160x160.jpg"}
                   className="rounded-circle shadow"
                   alt="User Image"
                 />
